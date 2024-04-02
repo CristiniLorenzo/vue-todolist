@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+img{
+    width: 400px;
+}
+main{
+    width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+main input{
+    height: 38px;
+    width: 300px;
+    border-radius: 10px;
+}
+.list-container{
+    background-color: lightgray;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px;
+}
+.single-task{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin: 15px;
+}
+.delete{
+    cursor: pointer;
+}
