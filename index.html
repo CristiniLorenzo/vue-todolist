@@ -23,8 +23,8 @@
             </div>
             <div class="list-container">
                 <div v-for="singleTask, index in tasks" class="single-task">
-                    <span class="task">{{ singleTask.text }}</span>
-                    <span class="delete" @click="deleteItems(index)"><i class="fa-solid fa-xmark"></i></span>
+                    <span class="task" @click="textWrap" :class="{ 'done': singleTask.done }">{{ singleTask.text }}</span>
+                    <span class="task" @click="textWrap(index)" :class="{ 'done': singleTask.done }">{{ singleTask.text }}</span>
                 </div>
                 
             </div>

@@ -43,6 +43,9 @@ createApp({
     methods: {
         deleteItems (indexToDelete) {
             this.tasks.splice(indexToDelete, 1);
-        }
+        },
+        textWrap(index) {
+            this.tasks[index].done = true;
+        },
     }
 }).mount('#app');

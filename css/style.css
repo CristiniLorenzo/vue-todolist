@@ -37,3 +37,6 @@ main input{
 .delete{
     cursor: pointer;
 }
+.done{
+    text-decoration: line-through;
+}
