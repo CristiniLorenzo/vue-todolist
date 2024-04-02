@@ -46,6 +46,17 @@ createApp({
         },
         textWrap(index) {
             this.tasks[index].done = true;
+
         },
+        addTask() {
+            const NewString = this.newTask.trim();
+            if (NewString.length >=5) {
+                this.tasks.push({
+                    text: NewString,
+                    done: false,
+                });
+                this.newTask = '';
+            }
+        }
     }
 }).mount('#app');

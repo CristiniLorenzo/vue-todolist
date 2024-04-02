@@ -18,13 +18,13 @@
 
         <main>
             <div class="input-area">
-                <input type="text" placeholder="Nuova Task">
-                <button class="btn btn-secondary">Aggiungi</button>
+                <input type="text" placeholder="Nuova Task" v-model="newTask" @keyup.enter="addTask">
+                <button class="btn btn-secondary" @click="addTask" >Aggiungi</button>
             </div>
             <div class="list-container">
                 <div v-for="singleTask, index in tasks" class="single-task">
-                    <span class="task" @click="textWrap" :class="{ 'done': singleTask.done }">{{ singleTask.text }}</span>
                     <span class="task" @click="textWrap(index)" :class="{ 'done': singleTask.done }">{{ singleTask.text }}</span>
+                    <span class="task" @click="deleteItems"><i class="fa-solid fa-xmark"></i></span>
                 </div>
                 
             </div>
