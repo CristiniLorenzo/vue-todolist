@@ -45,8 +45,16 @@ createApp({
             this.tasks.splice(indexToDelete, 1);
         },
         textWrap(index) {
-            this.tasks[index].done = true;
+            // this.tasks[index].done = true;
 
+            if (this.tasks[index]){
+                if(this.tasks[index].done == false)
+                    this.tasks[index].done = true; 
+                else{
+                    this.tasks[index].done = false; 
+            }
+
+            }
         },
         addTask() {
             const NewString = this.newTask.trim();
@@ -60,3 +68,4 @@ createApp({
         }
     }
 }).mount('#app');
+
